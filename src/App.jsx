@@ -1,9 +1,10 @@
-import "./App.css";
-
+import { useState } from "react";
 function App() {
   return (
-    <div className="container mx-auto px-4 bg-blue h-screen">
-      <section className="bg-purple-500 text-white">fc</section>
+    <div className="bg-blue w-screen h-screen text-center">
+      <section className="bg-purple-500 text-white bg-blue-dark container mx-auto">
+        fc
+      </section>
     </div>
   );
 }
