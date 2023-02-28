@@ -1,4 +1,4 @@
-const data = {
+export const api = {
   data: [
     {
       type: "gif",

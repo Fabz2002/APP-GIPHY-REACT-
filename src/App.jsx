@@ -1,10 +1,14 @@
-import { useState } from "react";
+import Navigator from "./components/Navigator";
+import ListOfGifs from "./components/ListOfGifs";
+import "./index.css";
 function App() {
   return (
-    <div className="bg-blue w-screen h-screen text-center">
-      <section className="bg-purple-500 text-white bg-blue-dark container mx-auto">
-        fc
-      </section>
+    <div className="bg-blue w-full h-full text-center pt-4">
+      <Navigator
+        btn="CAMBIAR"
+        title="Dar click para cambiar tema de los Gifs"
+      />
+      <ListOfGifs />
     </div>
   );
 }
