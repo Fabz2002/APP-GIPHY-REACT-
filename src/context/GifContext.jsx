@@ -7,18 +7,12 @@ export function GifContextProvider(props) {
   const [keyW, setkeyW] = useState("");
   const [gif, setgif] = useState([]);
 
-  function updateGif(kw) {
-    setkeyW(kw);
-  }
-  useEffect(
-    function () {
-      GetGifs({ keyword: keyW }).then((gif) => setgif(gif));
-    },
-    [keyW]
-  );
+  useEffect(() => {
+    GetGifs({ keyword: keyW }).then((gif) => setgif(gif));
+  }, [keyW]);
 
   return (
-    <GifContext.Provider value={{ updateGif, gif }}>
+    <GifContext.Provider value={{ setkeyW, gif }}>
       {props.children}
     </GifContext.Provider>
   );
