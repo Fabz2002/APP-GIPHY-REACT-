@@ -1,6 +1,8 @@
-const apiKey = "m9fjZ1dEn5gtC2KuZ0IPo66YjmYezf2t";
+const apiKey = import.meta.env.VITE_API_KEY;
 async function GetGifs({ keyword }) {
-  const apiGif = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${keyword}&limit=25&offset=0&rating=g&lang=en`;
+  const apiGif = `${
+    import.meta.env.VITE_API_KEY
+  }/search?api_key=${apiKey}&q=${keyword}&limit=25&offset=0&rating=g&lang=en`;
 
   const res = await fetch(apiGif);
   const response = await res.json();

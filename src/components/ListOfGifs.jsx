@@ -3,10 +3,10 @@ import { useContext } from "react";
 import { GifContext } from "../context/GifContext";
 
 function ListOfGifs() {
-  const { gif } = useContext(GifContext);
-  if (gif.length === 0) {
+  const { gifs } = useContext(GifContext);
+  if (gifs?.length === 0) {
     return (
-      <h1 className="text-white text-4xl font-bold text-center ">
+      <h1 className="text-white text-4xl font-bold text-center pt-2">
         No hay gifs aun
       </h1>
     );
@@ -16,8 +16,8 @@ function ListOfGifs() {
       <h1 className="text-red my-4  inline-block font-bold">
         LOS GIFS ENCONTRADOS ....
       </h1>
-      {gif.slice(0, 5).map((element) => {
-        return <GifCard key={element.id} data={element} />;
+      {gifs.map((element, index) => {
+        return <GifCard key={index} data={element} />;
       })}
     </main>
   );

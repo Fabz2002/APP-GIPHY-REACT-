@@ -1,12 +1,12 @@
 import { useContext } from "react";
 import { GifContext } from "../context/GifContext";
 function ButtonSearch({ btn, className, word }) {
-  const { setkeyW } = useContext(GifContext);
+  const { setKeyW, setRandom } = useContext(GifContext);
   return (
     <button
       type="button"
       onClick={(e) => {
-        setkeyW(word);
+        setKeyW(word);
       }}
       className={className}
     >

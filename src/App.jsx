@@ -3,8 +3,8 @@ import ListOfGifs from "./components/ListOfGifs";
 
 function App() {
   return (
-    <div className="bg-blue w-full h-full text-center pt-4 ">
-      <Navigator btn="Buscar" title="Dar click para cambiar tema de los Gifs" />
+    <div className="bg-blue w-full min-h-screen text-center pt-4 absolute">
+      <Navigator title="Dar click para cambiar tema de los Gifs" />
       <ListOfGifs />
     </div>
   );
