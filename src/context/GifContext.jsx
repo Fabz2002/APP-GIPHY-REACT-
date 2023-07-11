@@ -11,7 +11,10 @@ export function GifContextProvider(props) {
 
   useEffect(() => {
     if (random) fetchRandomGif();
-    if (!random) fetchGifsByKeyword();
+    if (!random) {
+      fetchGifsByKeyword();
+      setKeyW("");
+    }
   }, [buttonRandomToggle, keyW]);
 
   async function fetchRandomGif() {
